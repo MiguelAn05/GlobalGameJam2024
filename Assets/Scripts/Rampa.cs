@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rampa : Combos
+public class Rampa : MonoBehaviour
 {
     [Range(0, 100)]
     public float piso;
@@ -13,6 +13,7 @@ public class Rampa : Combos
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.CompareTag("player"))
         {
             print("Espacio");
