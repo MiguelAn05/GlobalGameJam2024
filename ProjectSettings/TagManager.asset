@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collision
   - player
+  - SpecificArea
   layers:
   - Default
   - TransparentFX
