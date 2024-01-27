@@ -2,30 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoYrampa : MonoBehaviour
+public class Rampa : Combos
 {
     [Range(0, 100)]
     public float piso;
-    public GameObject player;
-    public Rigidbody rb;
+    public Rigidbody2D rb;
+    private float graviti = -10f;
+    private float graviti2 = 1;
+    private bool isJumping = false;
 
-    // Start is called before the first frame update
-    private void Awake()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.DrawLine(player.transform.position, new Vector3(-4f, -5f, 0), Color.red);
-        
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        if (player.transform.position == new Vector3(-4f, -5f, 0))
+        if (other.CompareTag("player"))
         {
-            if (Input.GetKey("space"))
+            print("Espacio");
+            if (Input.GetKey(KeyCode.Space))
             {
-                rb = GetComponent<Rigidbody>();
-                rb.mass--;
-                print("space key was pressed");
+                isJumping = true;
+                rb.gravityScale = graviti;
+                rb.velocity = new Vector2(rb.velocity.x, piso);
+                print("saltar");
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (isJumping && rb.velocity.y >= 0)
+        {
+            isJumping = false;
+            rb.gravityScale = Mathf.Abs(graviti2++); // Restaura la gravedad normalizando su valor absoluto
         }
     }
 }
