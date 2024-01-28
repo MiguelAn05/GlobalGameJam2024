@@ -6,20 +6,22 @@ public class Jugador : MonoBehaviour
     
     public float fuerzaSalto = 10f;
     public int totales;
-    private void Awake()
+    public float velocity = 2.4f;
+    private Rigidbody2D rigidbody;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        
+        rigidbody = GetComponent<Rigidbody2D>();
     }
+
+    // Update is called once per frame
     void Update()
     {
-        Combos Points = GetComponent<Combos>();
-        totales = Points.total;
- 
-        if (totales >= 75)
+        if (Input.GetMouseButtonDown(0))
         {
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+            rigidbody.velocity = Vector2.up * velocity;
         }
-        
     }
 }
+
