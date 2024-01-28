@@ -5,7 +5,7 @@ using UnityEngine;
 public class WallRandom : MonoBehaviour
 
 {
-    public GameObject objetoAleatorio;
+    public GameObject[] objetoAleatorio;
     public float distancia = 10.0f;
     public int CantidadDeveces = 2;
 
@@ -23,10 +23,9 @@ public class WallRandom : MonoBehaviour
 
     void PlaceObjectRandomly(Vector3 posicion)
     {
-        Instantiate(objetoAleatorio, posicion, Quaternion.identity);
+        int randomIndex = Random.Range(0, objetoAleatorio.Length);
+        Instantiate(objetoAleatorio[randomIndex], posicion, Quaternion.identity);
     }
-
-
 
 }
 
