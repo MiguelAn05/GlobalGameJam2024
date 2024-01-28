@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isFine = PlayerPrefs.GetInt("selectedCharacter");
+        isFine = PlayerPrefs.GetInt("gameOver");
 
         if (isFine == 1)
         {

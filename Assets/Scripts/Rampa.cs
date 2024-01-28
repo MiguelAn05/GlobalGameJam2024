@@ -19,19 +19,13 @@ public class Rampa : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("detecion");
-        Debug.Log(other);
-        Debug.Log(other.tag);
         if (other.CompareTag("player"))
         {
-            print("DeteccionTag");
-            print("Espacio");
             if (Input.GetKey(KeyCode.W))
             {
                 isJumping = true;
                 rb.gravityScale = graviti;
                 rb.velocity = new Vector2(rb.velocity.x, piso);
-                print("saltar");
             }
         }
     }
