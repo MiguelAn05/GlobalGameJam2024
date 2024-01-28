@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Diana : MonoBehaviour
 {
     public float velocidad = 2.0f;  // Velocidad de movimiento de la plataforma
-    public float limiteSuperior = 5.0f;  // Posición más alta de la plataforma
-    public float limiteInferior = -5.0f;  // Posición más baja de la plataforma
+    public float limiteSuperior = 5.0f;  // Posici?n m?s alta de la plataforma
+    public float limiteInferior = -5.0f;  // Posici?n m?s baja de la plataforma
 
-    private bool subiendo = true;  // Bandera para determinar si la plataforma está subiendo o bajando
+    private bool subiendo = true;  // Bandera para determinar si la plataforma est? subiendo o bajando
 
     void Update()
     {
@@ -22,7 +23,7 @@ public class Diana : MonoBehaviour
             transform.Translate(Vector3.down * velocidad * Time.deltaTime);
         }
 
-        // Cambiar la dirección cuando se alcanza un límite
+        // Cambiar la direcci?n cuando se alcanza un l?mite
         if (transform.position.y >= limiteSuperior)
         {
             subiendo = false;
@@ -33,12 +34,14 @@ public class Diana : MonoBehaviour
         }
     }
 
-    // Método llamado cuando un objeto colisiona con la plataforma
+    // M?todo llamado cuando un objeto colisiona con la plataforma
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("CarMarket"))  // Reemplaza "TuTagDeObjeto" con el tag de tu objeto
+        if (collision.gameObject.CompareTag("player"))  // Reemplaza "TuTagDeObjeto" con el tag de tu objeto
         {
-            Debug.Log("¡Objeto colisionó con la plataforma!");
+            PlayerPrefs.SetInt("gameOver", 1);
+
+            SceneManager.LoadScene("GameOver", 0);
         }
     }
 }
