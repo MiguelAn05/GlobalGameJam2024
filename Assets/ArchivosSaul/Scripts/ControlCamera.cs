@@ -12,7 +12,7 @@ public class ControlCamera : MonoBehaviour
         if (objetivo != null)
         {
             // Calcula la posición deseada de la cámara
-            Vector3 posicionDeseada = new Vector3(objetivo.position.x, objetivo.position.y, transform.position.z);
+            Vector3 posicionDeseada = new Vector3(objetivo.position.x+8f, objetivo.position.y*0, transform.position.z);
 
             // Usa la función Lerp para suavizar el movimiento de la cámara
             transform.position = Vector3.Lerp(transform.position, posicionDeseada, suavizado * Time.deltaTime);

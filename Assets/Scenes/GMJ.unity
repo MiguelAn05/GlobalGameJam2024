@@ -809,9 +809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b5d71ea11c7524bbc6349422adf214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 10
-  totales: 0
-  velocity: 2.4
+  jumpForce: 5
+  horizontalForce: 2
 --- !u!1 &1810688684
 GameObject:
   m_ObjectHideFlags: 0
