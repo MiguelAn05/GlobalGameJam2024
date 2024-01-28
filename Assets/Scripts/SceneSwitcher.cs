@@ -5,12 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    
     public void SceneChanger(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
