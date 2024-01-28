@@ -15,7 +15,7 @@ public class MoveCar : MonoBehaviour
         animator = GetComponent<Animator>();
         character[0].SetActive(false);
         character[1].SetActive(false);
-        
+        Invoke("ActivateAnimation", 7.0f);
 
     }
 
@@ -42,20 +42,27 @@ public class MoveCar : MonoBehaviour
             character[1].SetActive(true);
 
             gameObject.SetActive(false);
-            PlayRandomAnimation();
+
+            
+            
         }
 
+        
      }
-    void PlayRandomAnimation()
+    void ActivateAnimation()
     {
-        int RandomPlay = Random.Range(0, character.Length);
-        RandomPlay = Mathf.Clamp(RandomPlay, 0, character.Length -1 );
-
-        character[RandomPlay].SetActive(true); 
+        int randomAnimation = Random.Range(0, 2);
+        
+        if (randomAnimation==0)
+        {
+                animator.SetBool("Action1", true);
+        }
+        if (randomAnimation == 1)
+        {
+                animator.SetBool("Action2", true);
+        }
+        
     }
-            
-
-    
 }   
 
 
