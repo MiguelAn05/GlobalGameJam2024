@@ -8,12 +8,13 @@ public class SaltoParabolico : MonoBehaviour
     public float horizontalForce = 2.0f;
     private Rigidbody2D rb;
     private bool hasJumped = false;
-    private int puntaje;
+    public int puntaje;
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+      
     }
 
     void Update()
@@ -30,6 +31,7 @@ public class SaltoParabolico : MonoBehaviour
 
         if (puntaje == 10)
         {
+
             
         }
 
