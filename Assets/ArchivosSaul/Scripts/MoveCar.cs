@@ -9,7 +9,8 @@ public class MoveCar : MonoBehaviour
     public GameObject[] character;
     public SaltoParabolico points;
     public Rigidbody2D fly;
-    
+    private int impulse = 5;
+
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class MoveCar : MonoBehaviour
 
         transform.Translate(Vector3.right * movement * Speed * Time.deltaTime);
         character[0].transform.position = transform.position;
-        character[1].transform.position = new Vector2(transform.position.x + 1.5f,transform.position.y + 1.5f);
+        character[1].transform.position = new Vector2(transform.position.x + 2f,transform.position.y + 2f);
         
 
         if (Input.GetKey(KeyCode.D))
@@ -42,11 +43,10 @@ public class MoveCar : MonoBehaviour
         {
             character[0].SetActive(true);
             character[1].SetActive(true);
+            
 
             gameObject.SetActive(false);
-
-            
-            
+            fly.velocity = new Vector2(fly.velocity.x * impulse, impulse);
         }
 
         

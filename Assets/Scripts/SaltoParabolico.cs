@@ -9,6 +9,7 @@ public class SaltoParabolico : MonoBehaviour
     private Rigidbody2D rb;
     private bool hasJumped = false;
     public int puntaje;
+    private int impulse;
 
     void Start()
     {
@@ -18,13 +19,13 @@ public class SaltoParabolico : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             // Salto hacia arriba
-            rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
-            // Componente horizontal (puedes ajustar la direcci?n seg?n tus necesidades)
-            rb.AddForce(Vector3.forward * horizontalForce, ForceMode2D.Impulse);
+            // Componente horizontal
+            rb.AddForce(Vector2.right * horizontalForce, ForceMode2D.Impulse);
             puntaje ++;
         }
 
