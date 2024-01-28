@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5591324210825105313}
   - component: {fileID: 4294141056625044846}
   - component: {fileID: 2946659890347776436}
+  - component: {fileID: 416552814899129201}
+  - component: {fileID: 1521927166588929781}
   m_Layer: 0
   m_Name: Flightcaracter
   m_TagString: Untagged
@@ -184,3 +186,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &416552814899129201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509205614764634681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b5d71ea11c7524bbc6349422adf214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  horizontalForce: 2
+  puntaje: 0
+--- !u!114 &1521927166588929781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509205614764634681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096035b4c0d8d1446ad761e5f6c22c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  animator: {fileID: 0}
+  character: []
+  points: {fileID: 0}

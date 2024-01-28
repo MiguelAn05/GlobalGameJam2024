@@ -10,14 +10,23 @@ public class Rampa : MonoBehaviour
     private float graviti = -10f;
     private float graviti2 = 1;
     private bool isJumping = false;
+   // public GameObject player;
+
+    void Awake()
+    {
+        //rb = gameObject.GetComponent<Rigidbody2D>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
+        Debug.Log("detecion");
+        Debug.Log(other);
+        Debug.Log(other.tag);
         if (other.CompareTag("player"))
         {
+            print("DeteccionTag");
             print("Espacio");
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.W))
             {
                 isJumping = true;
                 rb.gravityScale = graviti;

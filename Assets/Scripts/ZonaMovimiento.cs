@@ -12,13 +12,13 @@ public class ZonaMovimiento : MonoBehaviour
         if (dentroDelTrigger)
         {
             float movimientoH = Input.GetAxis("Horizontal");
-            float movimientoV = Input.GetAxis("Vertical");
-            Vector2 movimiento = new Vector2(movimientoH, movimientoV);
+            
+            Vector2 movimiento = new Vector2(movimientoH,0);
 
             // Aplica el movimiento al jugador
             transform.position = new Vector2(
-                transform.position.x + movimiento.x * velocidad * Time.deltaTime,
-                transform.position.y + movimiento.y * velocidad * Time.deltaTime
+                transform.position.x + movimiento.x * velocidad * Time.deltaTime,0
+               
             );
         }
     }

@@ -8,6 +8,7 @@ public class MoveCar : MonoBehaviour
     public Animator animator;
     public GameObject[] character;
     public SaltoParabolico points;
+    public Rigidbody2D fly;
     
 
     void Start()
@@ -25,7 +26,8 @@ public class MoveCar : MonoBehaviour
 
         transform.Translate(Vector3.right * movement * Speed * Time.deltaTime);
         character[0].transform.position = transform.position;
-        character[1].transform.position = transform.position;
+        character[1].transform.position = new Vector2(transform.position.x + 1.5f,transform.position.y + 1.5f);
+        
 
         if (Input.GetKey(KeyCode.D))
         {
