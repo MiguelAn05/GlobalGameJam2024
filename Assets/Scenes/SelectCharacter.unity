@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -226, y: -14.864}
-  m_SizeDelta: {x: 177.6503, y: 228.7081}
+  m_AnchoredPosition: {x: -447, y: -146}
+  m_SizeDelta: {x: 473.9631, y: 610.1829}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &224685280
 Animator:
@@ -582,10 +582,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1280610345}
   - {fileID: 1018378495}
   - {fileID: 1485282124}
   - {fileID: 224685279}
+  - {fileID: 883053718}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -628,7 +628,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -19.8}
-  m_SizeDelta: {x: 89.0114, y: 127.0918}
+  m_SizeDelta: {x: 208.2306, y: 297.3148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &550821466
 MonoBehaviour:
@@ -716,6 +716,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &883053718 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6458122077737307882, guid: eff1521a57c31a74c991621a756c6108, type: 3}
+  m_PrefabInstance: {fileID: 7926630022046882077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1018378491
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,8 +853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: -46}
-  m_SizeDelta: {x: 160, y: 181}
+  m_AnchoredPosition: {x: 33, y: -133}
+  m_SizeDelta: {x: 423.9855, y: 479.6335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1018378496
 Animator:
@@ -872,11 +877,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!224 &1280610345 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4502220618008898287, guid: eff1521a57c31a74c991621a756c6108, type: 3}
-  m_PrefabInstance: {fileID: 7926630022046882077}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1485282123
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,8 +914,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 213, y: -46}
-  m_SizeDelta: {x: 160, y: 181}
+  m_AnchoredPosition: {x: 568.2817, y: -133}
+  m_SizeDelta: {x: 423.9855, y: 479.6335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485282125
 MonoBehaviour:
@@ -1046,7 +1046,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -23}
-  m_SizeDelta: {x: 119.8097, y: 119.8097}
+  m_SizeDelta: {x: 301.0193, y: 301.0193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539015511
 MonoBehaviour:
@@ -1299,6 +1299,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 396735780}
     m_Modifications:
+    - target: {fileID: 1535965977702305645, guid: eff1521a57c31a74c991621a756c6108, type: 3}
+      propertyPath: m_text
+      value: Choose your faller
+      objectReference: {fileID: 0}
     - target: {fileID: 4502220618008898287, guid: eff1521a57c31a74c991621a756c6108, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

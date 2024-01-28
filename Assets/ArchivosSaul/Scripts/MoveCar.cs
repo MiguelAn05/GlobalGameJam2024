@@ -7,6 +7,7 @@ public class MoveCar : MonoBehaviour
     public float Speed;
     public Animator animator;
     public GameObject[] character;
+    public SaltoParabolico points;
     
 
     void Start()
@@ -39,10 +40,20 @@ public class MoveCar : MonoBehaviour
         {
             character[0].SetActive(true);
             character[1].SetActive(true);
+
             gameObject.SetActive(false);
+            PlayRandomAnimation();
         }
 
      }
+    void PlayRandomAnimation()
+    {
+        int RandomPlay = Random.Range(0, character.Length);
+        RandomPlay = Mathf.Clamp(RandomPlay, 0, character.Length -1 );
+
+        character[RandomPlay].SetActive(true); 
+    }
+            
 
     
 }   
