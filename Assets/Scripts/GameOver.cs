@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
 {
     int isFine;
     public TMP_Text textToChange;
+    public Image imageTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +17,14 @@ public class GameOver : MonoBehaviour
 
         if (isFine == 1)
         {
-            textToChange.text = "You nail it"; 
+            textToChange.text = "You nailed it";
+            imageTarget.enabled = true;
         }
         else
         {
-            textToChange.text = "You fail it";
+            textToChange.text = "You failed";
+            imageTarget.enabled = false;
+
         }
     }
 }

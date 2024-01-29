@@ -10,15 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7184066923621186123}
   - component: {fileID: 8885027283756024727}
-  - component: {fileID: 3449417161098444211}
   - component: {fileID: 5591324210825105313}
-  - component: {fileID: 4294141056625044846}
   - component: {fileID: 2946659890347776436}
   - component: {fileID: 416552814899129201}
-  - component: {fileID: 1521927166588929781}
+  - component: {fileID: 1761184600936000062}
   m_Layer: 0
   m_Name: Flightcaracter
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509205614764634681}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.047724877, w: 0.99886054}
+  m_LocalRotation: {x: 0, y: 0, z: -0.04772533, w: 0.9988605}
   m_LocalPosition: {x: -18.31, y: 1.3, z: 0}
   m_LocalScale: {x: 1.0114751, y: 0.87116784, z: 1}
   m_ConstrainProportionsScale: 0
@@ -79,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b125096490778e241849a207d5bf7aff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f71eea9aa23a3640952fd7cfc61aa92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3449417161098444211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509205614764634681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32531b1b106a7b645ac7d6eb6f0f90b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fuerzaSalto: 10
 --- !u!50 &5591324210825105313
 Rigidbody2D:
   serializedVersion: 4
@@ -130,41 +115,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &4294141056625044846
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509205614764634681}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.27148834, y: -0.055309463}
-  serializedVersion: 2
-  m_Radius: 0.81124085
 --- !u!95 &2946659890347776436
 Animator:
   serializedVersion: 5
@@ -201,19 +151,38 @@ MonoBehaviour:
   jumpForce: 5
   horizontalForce: 2
   puntaje: 0
---- !u!114 &1521927166588929781
-MonoBehaviour:
+--- !u!70 &1761184600936000062
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509205614764634681}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096035b4c0d8d1446ad761e5f6c22c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  animator: {fileID: 0}
-  character: []
-  points: {fileID: 0}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.060193747, y: 0.13963766}
+  m_Size: {x: 1.0182306, y: 3.3633199}
+  m_Direction: 0

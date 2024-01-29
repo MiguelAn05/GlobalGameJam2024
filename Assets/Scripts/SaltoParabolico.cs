@@ -7,7 +7,6 @@ public class SaltoParabolico : MonoBehaviour
     public float jumpForce = 5.0f;
     public float horizontalForce = 2.0f;
     private Rigidbody2D rb;
-    private bool hasJumped = false;
     public int puntaje;
     private int impulse;
 

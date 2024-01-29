@@ -13,7 +13,7 @@ public class ZonaMuerte : MonoBehaviour
         if (other.gameObject.CompareTag("player"))
         {
             print("se murio");
-            PlayerPrefs.SetInt("gameOver", 1);
+            PlayerPrefs.SetInt("gameOver", 0);
 
             SceneManager.LoadScene("GameOver", 0);
         }

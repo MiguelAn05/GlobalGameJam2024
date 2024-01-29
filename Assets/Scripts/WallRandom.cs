@@ -5,12 +5,14 @@ using UnityEngine;
 public class WallRandom : MonoBehaviour
 
 {
+
     public GameObject[] objetoAleatorio;
-    public float distancia = 10.0f;
+    public float distancia = 4.0f;
     public int CantidadDeveces = 2;
 
     void Start()
     {
+
         Vector3 posicionInicial = new Vector3(20, 0, 0);
 
         for (int i = 0; i < CantidadDeveces; i++)

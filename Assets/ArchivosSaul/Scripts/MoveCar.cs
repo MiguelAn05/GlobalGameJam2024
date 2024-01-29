@@ -21,7 +21,7 @@ public class MoveCar : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float movement = Input.GetAxis("Horizontal");
 
@@ -39,7 +39,7 @@ public class MoveCar : MonoBehaviour
             animator.SetBool("Run", false);
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W))
         {
             character[0].SetActive(true);
             character[1].SetActive(true);
