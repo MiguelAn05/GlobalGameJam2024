@@ -18,7 +18,7 @@ public class SaltoParabolico : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             // Salto hacia arriba
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);

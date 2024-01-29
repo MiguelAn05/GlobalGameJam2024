@@ -39,7 +39,7 @@ public class MoveCar : MonoBehaviour
             animator.SetBool("Run", false);
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.Space))
         {
             character[0].SetActive(true);
             character[1].SetActive(true);
