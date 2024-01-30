@@ -138,6 +138,11 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5591324210825105313, guid: 1e26a66e2cb1a9c4f84a7aaba9037b96, type: 3}
   m_PrefabInstance: {fileID: 1177475357}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &14914024 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2946659890347776436, guid: 1e26a66e2cb1a9c4f84a7aaba9037b96, type: 3}
+  m_PrefabInstance: {fileID: 1177475357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &137692690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1485,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 416552814899129201, guid: 1e26a66e2cb1a9c4f84a7aaba9037b96, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 14914024}
     - target: {fileID: 1509205614764634681, guid: 1e26a66e2cb1a9c4f84a7aaba9037b96, type: 3}
       propertyPath: m_Name
       value: Flightcaracter

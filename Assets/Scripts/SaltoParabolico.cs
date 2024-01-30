@@ -9,7 +9,7 @@ public class SaltoParabolico : MonoBehaviour
     private Rigidbody2D rb;
     public int puntaje;
     private int impulse;
-
+    public Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,10 +28,14 @@ public class SaltoParabolico : MonoBehaviour
             puntaje ++;
         }
 
-        if (puntaje == 10)
+        if (Input.GetKeyDown(KeyCode.J))
         {
+            animator.SetTrigger("Action1");
+        }
 
-            
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            animator.SetTrigger("Action2");
         }
 
         // Opcional: Reiniciar la bandera de salto cuando aterriza (por ejemplo, cuando la posici?n y es inferior a cierto umbral)
